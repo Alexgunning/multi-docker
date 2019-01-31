@@ -9,7 +9,7 @@ before_install:
 scripts:
  - docker run dockeralex23/react-test npm test -- --coverage
 
-after_sucess:
+after_success:
  - docker build -t dockeralex23/multi-client ./client
  - docker build -t dockeralex23/multi-nginx ./nginx
  - docker build -t dockeralex23/multi-server ./server
