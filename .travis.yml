@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t dockeralex23/react-test -f ./client/Dockerfile.dev
+  - docker build -t dockeralex23/react-test -f ./client/Dockerfile.dev ./client
 
 scripts:
   - docker run dockeralex23/react-test npm test -- --coverage
